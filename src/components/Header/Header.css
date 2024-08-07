@@ -1,0 +1,28 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  position: relative;
+}
+.header-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+
+  animation: fadeIn 3s;
+}
+.header-contents h2 {
+  font-weight: 600;
+  font-size: var(--fs-900);
+}
+
+.button {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-100);
+  font-weight: 600;
+
+  background-color: var(--clr-accent-secondary);
+
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}

@@ -1,0 +1,85 @@
+.food_item_card {
+  border: 2px solid magenta;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+  transition: 0.3s;
+  animation: fadeIn 1s;
+}
+
+.food_item_card:hover,
+.food_item_card:focus,
+.food_item_card:active {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+  scale: 1.001;
+}
+
+.food-item-img-container {
+  position: relative;
+}
+.food-item-img-container .add {
+  width: var(--fs-800);
+  border-radius: 50%;
+  outline: none;
+
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+  animation: fadeIn 1s;
+}
+.food-item-img-container .add:hover {
+  border: 3px solid var(--clr-accent-100);
+}
+
+.food-item-image {
+  max-width: 100%;
+  display: block;
+  border-radius: 1rem 1rem 0px 0px;
+  object-fit: cover;
+  aspect-ratio: 18 / 13;
+}
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px;
+  border-radius: 50px;
+  background-color: white;
+}
+.food-item-counter img {
+  width: 2rem;
+  filter: contrast(1.75);
+}
+.food-item-counter img:hover {
+  cursor: pointer;
+  filter: contrast(1);
+}
+
+.food-item-info {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.food-item-desc {
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-300);
+}
