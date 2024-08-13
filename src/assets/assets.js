@@ -1,76 +1,12 @@
-import basket_icon from './basket_icon.png'
-import logo from './logo.png'
-import header_img from './header_img.png'
-import search_icon from './search_icon.png'
-import menu_1 from './menu_1.png'
-import menu_2 from './menu_2.png'
-import menu_3 from './menu_3.png'
-import menu_4 from './menu_4.png'
-import menu_5 from './menu_5.png'
-import menu_6 from './menu_6.png'
-import menu_7 from './menu_7.png'
-import menu_8 from './menu_8.png'
-import rating_starts from './rating_starts.png'
-import food_1 from './food_1.png'
-import food_2 from './food_2.png'
-import food_3 from './food_3.png'
-import food_4 from './food_4.png'
-import food_5 from './food_5.png'
-import food_6 from './food_6.png'
-import food_7 from './food_7.png'
-import food_8 from './food_8.png'
-import food_9 from './food_9.png'
-import food_10 from './food_10.png'
-import food_11 from './food_11.png'
-import food_12 from './food_12.png'
-import food_13 from './food_13.png'
-import food_14 from './food_14.png'
-import food_15 from './food_15.png'
-import food_16 from './food_16.png'
-import food_17 from './food_17.png'
-import food_18 from './food_18.png'
-import food_19 from './food_19.png'
-import food_20 from './food_20.png'
-import food_21 from './food_21.png'
-import food_22 from './food_22.png'
-import food_23 from './food_23.png'
-import food_24 from './food_24.png'
-import food_25 from './food_25.png'
-import food_26 from './food_26.png'
-import food_27 from './food_27.png'
-import food_28 from './food_28.png'
-import food_29 from './food_29.png'
-import food_30 from './food_30.png'
-import food_31 from './food_31.png'
-import food_32 from './food_32.png'
-
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
 import remove_icon_red from './remove_icon_red.png'
-import app_store from './app_store.png'
-import play_store from './play_store.png'
-import linkedin_icon from './linkedin_icon.png'
-import facebook_icon from './facebook_icon.png'
-import twitter_icon from './twitter_icon.png'
-import cross_icon from './cross_icon.png'
-import selector_icon from './selector_icon.png'
+
 
 export const assets = {
-    logo,
-    basket_icon,
-    header_img,
-    search_icon,
-    rating_starts,
     add_icon_green,
     add_icon_white,
     remove_icon_red,
-    app_store,
-    play_store,
-    linkedin_icon,
-    facebook_icon,
-    twitter_icon,
-    cross_icon,
-    selector_icon
 }
 
 
@@ -81,7 +17,7 @@ export const menu_list = [
     },
     {
         menu_name: "Vegetarian Entrees",
-        menu_image: menu_2
+        menu_image: "#"
     },
     {
         menu_name: "Chicken Entrees",
@@ -123,9 +59,9 @@ export const menu_list = [
 ];
 
 
-export const food_list = [
+export let food_list = [
     {
-        food_id: 1,
+
         food_name: "Veg Samosa",
         food_image: "#",
         food_price: 4.99,
@@ -133,7 +69,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 2,
+
         food_name: "Samosa Chaat",
         food_image: "#",
         food_price: 7.99,
@@ -141,7 +77,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 3,
+
         food_name: "Papri Chaat",
         food_image: "#",
         food_price: 7.99,
@@ -149,7 +85,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 4,
+
         food_name: "Soya Chops",
         food_image: "#",
         food_price: 9.99,
@@ -157,7 +93,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 5,
+
         food_name: "Paneer Tikka",
         food_image: "#",
         food_price: 10.99,
@@ -165,7 +101,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 6,
+
         food_name: "Veg Pakora (vegan)",
         food_image: "#",
         food_price: 4.99,
@@ -173,7 +109,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 7,
+
         food_name: "Chicken 65",
         food_image: "#",
         food_price: 9.99,
@@ -181,7 +117,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 8,
+
         food_name: "Chicken Pepper Fry",
         food_image: "#",
         food_price: 9.99,
@@ -189,7 +125,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 9,
+
         food_name: "Chicken Majestic",
         food_image: "#",
         food_price: 9.99,
@@ -197,7 +133,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 10,
+
         food_name: "Chicken Pakora",
         food_image: "#",
         food_price: 9.99,
@@ -205,7 +141,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 11,
+
         food_name: "Amritsari Fish",
         food_image: "#",
         food_price: 9.99,
@@ -213,7 +149,7 @@ export const food_list = [
         food_category: "Appetizers"
     },
     {
-        food_id: 12,
+
         food_name: "Paneer Tikka Masala",
         food_image: "#",
         food_price: 13.99,
@@ -221,7 +157,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 13,
+
         food_name: "Malai Kofta",
         food_image: "#",
         food_price: 13.99,
@@ -229,7 +165,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 14,
+
         food_name: "Saag Paneer",
         food_image: "#",
         food_price: 13.99,
@@ -237,7 +173,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 15,
+
         food_name: "Mutter Paneer",
         food_image: "#",
         food_price: 13.99,
@@ -245,7 +181,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 16,
+
         food_name: "Kadai Paneer",
         food_image: "#",
         food_price: 13.99,
@@ -253,7 +189,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 17,
+
         food_name: "Navratna Korma",
         food_image: "#",
         food_price: 13.99,
@@ -261,7 +197,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 18,
+
         food_name: "Chana Masala",
         food_image: "#",
         food_price: 12.99,
@@ -269,7 +205,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 19,
+
         food_name: "Aloo Gobi",
         food_image: "#",
         food_price: 12.99,
@@ -277,7 +213,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 20,
+
         food_name: "Baingan Bhartha",
         food_image: "#",
         food_price: 13.99,
@@ -285,7 +221,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 21,
+
         food_name: "Methi Malai Mutter",
         food_image: "#",
         food_price: 13.99,
@@ -293,7 +229,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 22,
+
         food_name: "Soya Tikka Masala",
         food_image: "#",
         food_price: 13.99,
@@ -301,7 +237,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 23,
+
         food_name: "Soya Korma",
         food_image: "#",
         food_price: 13.99,
@@ -309,7 +245,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 24,
+
         food_name: "Bhindi Masala",
         food_image: "#",
         food_price: 13.99,
@@ -317,7 +253,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 25,
+
         food_name: "Tadka Daal",
         food_image: "#",
         food_price: 12.99,
@@ -325,7 +261,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 26,
+
         food_name: "Daal Makhani",
         food_image: "#",
         food_price: 12.99,
@@ -333,7 +269,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 27,
+
         food_name: "Raindrop Daal",
         food_image: "#",
         food_price: 12.99,
@@ -341,7 +277,7 @@ export const food_list = [
         food_category: "Vegetarian Entrees"
     },
     {
-        food_id: 28,
+
         food_name: "Butter Chicken",
         food_image: "#",
         food_price: 15.99,
@@ -349,7 +285,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 29,
+
         food_name: "Chicken Tikka Masala",
         food_image: "#",
         food_price: 15.99,
@@ -357,7 +293,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 30,
+
         food_name: "Chicken Curry (Dhaba style)",
         food_image: "#",
         food_price: 14.99,
@@ -365,7 +301,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 31,
+
         food_name: "Chicken Vindaloo",
         food_image: "#",
         food_price: 14.99,
@@ -373,7 +309,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 32,
+
         food_name: "Chicken Korma",
         food_image: "#",
         food_price: 15.99,
@@ -381,7 +317,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 33,
+
         food_name: "Chicken Curry (Andhra style)",
         food_image: "#",
         food_price: 14.99,
@@ -389,7 +325,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 34,
+
         food_name: "Kadhai Chicken",
         food_image: "#",
         food_price: 14.99,
@@ -397,7 +333,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 35,
+
         food_name: "Mango Chicken",
         food_image: "#",
         food_price: 15.99,
@@ -405,7 +341,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 36,
+
         food_name: "Chicken Saag",
         food_image: "#",
         food_price: 15.99,
@@ -413,7 +349,7 @@ export const food_list = [
         food_category: "Chicken Entrees"
     },
     {
-        food_id: 37,
+
         food_name: "Goat Curry",
         food_image: "#",
         food_price: 16.99,
@@ -421,7 +357,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 38,
+
         food_name: "Goat Tikka Masala",
         food_image: "#",
         food_price: 17.99,
@@ -429,7 +365,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 39,
+
         food_name: "Goat Korma",
         food_image: "#",
         food_price: 17.99,
@@ -437,7 +373,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 40,
+
         food_name: "Goat Rogan Josh",
         food_image: "#",
         food_price: 16.99,
@@ -445,7 +381,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 41,
+
         food_name: "Goat Saag",
         food_image: "#",
         food_price: 17.99,
@@ -453,7 +389,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 42,
+
         food_name: "Goat Vindaloo",
         food_image: "#",
         food_price: 16.99,
@@ -461,7 +397,7 @@ export const food_list = [
         food_category: "Goat Entrees"
     },
     {
-        food_id: 43,
+
         food_name: "Lamb Curry",
         food_image: "#",
         food_price: 16.99,
@@ -469,7 +405,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 44,
+
         food_name: "Lamb Tikka Masala",
         food_image: "#",
         food_price: 17.99,
@@ -477,7 +413,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 45,
+
         food_name: "Lamb Korma",
         food_image: "#",
         food_price: 17.99,
@@ -485,7 +421,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 46,
+
         food_name: "Lamb Rogan Josh",
         food_image: "#",
         food_price: 16.99,
@@ -493,7 +429,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 47,
+
         food_name: "Lamb Vindaloo",
         food_image: "#",
         food_price: 16.99,
@@ -501,7 +437,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 48,
+
         food_name: "Lamb Saag",
         food_image: "#",
         food_price: 17.99,
@@ -509,7 +445,7 @@ export const food_list = [
         food_category: "Lamb Entrees"
     },
     {
-        food_id: 49,
+
         food_name: "Sheekh Kabab",
         food_image: "#",
         food_price: 14.99,
@@ -517,7 +453,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 50,
+
         food_name: "Malai Kabab",
         food_image: "#",
         food_price: 14.99,
@@ -525,7 +461,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 51,
+
         food_name: "Hariyali Kabab",
         food_image: "#",
         food_price: 14.99,
@@ -533,7 +469,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 52,
+
         food_name: "Tandoori Chicken",
         food_image: "#",
         food_price: 15.99,
@@ -541,7 +477,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 53,
+
         food_name: "Goat Chops",
         food_image: "#",
         food_price: 16.99,
@@ -549,7 +485,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 54,
+
         food_name: "Tandoori Mix Platter",
         food_image: "#",
         food_price: 22.99,
@@ -557,7 +493,7 @@ export const food_list = [
         food_category: "Tandoori Grill Special"
     },
     {
-        food_id: 55,
+
         food_name: "Naan",
         food_image: "#",
         food_price: 2.49,
@@ -565,7 +501,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 56,
+
         food_name: "Butter Naan",
         food_image: "#",
         food_price: 2.99,
@@ -573,7 +509,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 57,
+
         food_name: "Garlic Naan",
         food_image: "#",
         food_price: 3.99,
@@ -581,7 +517,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 58,
+
         food_name: "Roti (vegan)",
         food_image: "#",
         food_price: 2.99,
@@ -589,7 +525,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 59,
+
         food_name: "Tawa Roti (vegan)",
         food_image: "#",
         food_price: 2.99,
@@ -597,7 +533,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 60,
+
         food_name: "Onion Naan",
         food_image: "#",
         food_price: 4.99,
@@ -605,7 +541,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 61,
+
         food_name: "Kashmiri Naan",
         food_image: "#",
         food_price: 4.99,
@@ -613,7 +549,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 62,
+
         food_name: "Bullet Naan",
         food_image: "#",
         food_price: 3.99,
@@ -621,7 +557,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 63,
+
         food_name: "Lachha Paratha",
         food_image: "#",
         food_price: 4.99,
@@ -629,7 +565,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 64,
+
         food_name: "Aloo Naan",
         food_image: "#",
         food_price: 4.99,
@@ -637,7 +573,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 65,
+
         food_name: "Cheese Naan",
         food_image: "#",
         food_price: 4.99,
@@ -645,7 +581,7 @@ export const food_list = [
         food_category: "Bread Entrees"
     },
     {
-        food_id: 66,
+
         food_name: "Shrimp Korma",
         food_image: "#",
         food_price: 18.99,
@@ -653,7 +589,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 67,
+
         food_name: "Shrimp Tikka Masala",
         food_image: "#",
         food_price: 18.99,
@@ -661,7 +597,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 68,
+
         food_name: "Fish Tikka Masala",
         food_image: "#",
         food_price: 17.99,
@@ -669,7 +605,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 69,
+
         food_name: "Fish Korma",
         food_image: "#",
         food_price: 16.99,
@@ -677,7 +613,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 70,
+
         food_name: "Shrimp Saag",
         food_image: "#",
         food_price: 18.99,
@@ -685,7 +621,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 71,
+
         food_name: "Fish Curry",
         food_image: "#",
         food_price: 16.99,
@@ -693,7 +629,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 72,
+
         food_name: "Shrimp Curry",
         food_image: "#",
         food_price: 17.99,
@@ -701,7 +637,7 @@ export const food_list = [
         food_category: "Seafood Entrees"
     },
     {
-        food_id: 73,
+
         food_name: "Gobi Manchurian (vegan)",
         food_image: "#",
         food_price: 8.99,
@@ -709,7 +645,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 74,
+
         food_name: "Veg Manchurian (vegan)",
         food_image: "#",
         food_price: 8.99,
@@ -717,7 +653,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 75,
+
         food_name: "Chili Paneer",
         food_image: "#",
         food_price: 8.99,
@@ -725,7 +661,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 76,
+
         food_name: "Chili Chicken",
         food_image: "#",
         food_price: 9.99,
@@ -733,7 +669,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 77,
+
         food_name: "Chili Fish",
         food_image: "#",
         food_price: 9.99,
@@ -741,7 +677,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 78,
+
         food_name: "Chicken Momo (Fried)",
         food_image: "#",
         food_price: 13.99,
@@ -749,7 +685,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 79,
+
         food_name: "Chicken Momo (Steam)",
         food_image: "#",
         food_price: 13.99,
@@ -757,7 +693,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 80,
+
         food_name: "Chicken Momo (Gravy)",
         food_image: "#",
         food_price: 14.99,
@@ -765,7 +701,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 81,
+
         food_name: "Chicken Momo (Chili)",
         food_image: "#",
         food_price: 14.99,
@@ -773,7 +709,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 82,
+
         food_name: "Hakka Noodles (Chicken)",
         food_image: "#",
         food_price: 13.99,
@@ -781,7 +717,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 83,
+
         food_name: "Hakka Noodles (Egg)",
         food_image: "#",
         food_price: 12.99,
@@ -789,7 +725,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 84,
+
         food_name: "Hakka Noodles (Veg)",
         food_image: "#",
         food_price: 11.99,
@@ -797,7 +733,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 85,
+
         food_name: "Hakka Noodles (Shrimp)",
         food_image: "#",
         food_price: 14.99,
@@ -805,7 +741,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 86,
+
         food_name: "Fried Rice (Chicken)",
         food_image: "#",
         food_price: 13.99,
@@ -813,7 +749,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 87,
+
         food_name: "Fried Rice (Egg)",
         food_image: "#",
         food_price: 12.99,
@@ -821,7 +757,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 88,
+
         food_name: "Fried Rice (Veg)",
         food_image: "#",
         food_price: 11.99,
@@ -829,7 +765,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 89,
+
         food_name: "Fried Rice (Shrimp)",
         food_image: "#",
         food_price: 14.99,
@@ -837,7 +773,7 @@ export const food_list = [
         food_category: "Indo-Chinese"
     },
     {
-        food_id: 90,
+
         food_name: "Vegetable Madras",
         food_image: "#",
         food_price: 13.99,
@@ -845,7 +781,7 @@ export const food_list = [
         food_category: "South India Entrees"
     },
     {
-        food_id: 91,
+
         food_name: "Murg Masala",
         food_image: "#",
         food_price: 14.99,
@@ -853,7 +789,7 @@ export const food_list = [
         food_category: "South India Entrees"
     },
     {
-        food_id: 92,
+
         food_name: "Chicken Madras",
         food_image: "#",
         food_price: 14.99,
@@ -861,7 +797,7 @@ export const food_list = [
         food_category: "South India Entrees"
     },
     {
-        food_id: 93,
+
         food_name: "Fish Madras",
         food_image: "#",
         food_price: 15.99,
@@ -869,7 +805,7 @@ export const food_list = [
         food_category: "South India Entrees"
     },
     {
-        food_id: 94,
+
         food_name: "Shrimp Madras",
         food_image: "#",
         food_price: 18.99,
@@ -877,7 +813,7 @@ export const food_list = [
         food_category: "South India Entrees"
     },
     {
-        food_id: 95,
+
         food_name: "Chole Bhature",
         food_image: "#",
         food_price: 15.99,
@@ -885,7 +821,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 96,
+
         food_name: "Gobi Bezule",
         food_image: "#",
         food_price: 12.99,
@@ -893,7 +829,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 97,
+
         food_name: "Tawa Chicken",
         food_image: "#",
         food_price: 15.99,
@@ -901,7 +837,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 98,
+
         food_name: "Tawa Goat",
         food_image: "#",
         food_price: 17.99,
@@ -909,7 +845,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 99,
+
         food_name: "Goat Pepper Fry",
         food_image: "#",
         food_price: 17.99,
@@ -917,7 +853,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 100,
+
         food_name: "Achari Gosht",
         food_image: "#",
         food_price: 17.99,
@@ -925,7 +861,7 @@ export const food_list = [
         food_category: "Chefs Special"
     },
     {
-        food_id: 101,
+
         food_name: "Veg Biryani",
         food_image: "https://img.freepik.com/free-photo/veg-biryani-veg-pulav-fried-rice-indian-food-generative-ai_1258-151588.jpg",
         food_price: 13.99,
@@ -933,7 +869,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 102,
+
         food_name: "Egg Biryani",
         food_image: "#",
         food_price: 14.99,
@@ -941,7 +877,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 103,
+
         food_name: "Chicken Biryani",
         food_image: "#",
         food_price: 15.99,
@@ -949,7 +885,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 104,
+
         food_name: "Chicken Dum Biryani",
         food_image: "#",
         food_price: 16.99,
@@ -957,7 +893,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 105,
+
         food_name: "Lamb Biryani",
         food_image: "#",
         food_price: 17.99,
@@ -965,7 +901,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 106,
+
         food_name: "Goat Dum Biryani",
         food_image: "#",
         food_price: 17.99,
@@ -973,7 +909,7 @@ export const food_list = [
         food_category: "Biryani & Rice Entrees"
     },
     {
-        food_id: 107,
+
         food_name: "Shrimp Biryani",
         food_image: "#",
         food_price: 18.99,
@@ -982,3 +918,10 @@ export const food_list = [
     }
 
 ]
+
+food_list = food_list.map((food, index) => ({
+    ...food,
+    food_id: index + 1
+}))
+
+export default food_list

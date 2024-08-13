@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import "./FoodItem.css";
-import { assets } from "../../assets/assets";
+
 import { StoreContext } from "../../Context/StoreContext";
+import { assets } from "../../assets/assets";
 
 // Work: Update done
 
@@ -29,7 +30,7 @@ const FoodItem = ({ image, name, price, desc, id }) => {
               onClick={() => removeFromCart(id)}
               alt=""
             />
-            <p>{`${cartItems[id]}`}</p>
+            <p className="food_items_count">{`${cartItems[id]}`}</p>
             <img
               src={assets.add_icon_green}
               onClick={() => addToCart(id)}

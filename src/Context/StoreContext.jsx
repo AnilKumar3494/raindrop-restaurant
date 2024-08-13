@@ -31,10 +31,6 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
-  const placeOrder = (deliveryData) => {
-    console.log(deliveryData);
-  };
-
   const contextValue = {
     food_list,
     menu_list,
@@ -42,7 +38,6 @@ const StoreContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
-    placeOrder,
   };
 
   return (

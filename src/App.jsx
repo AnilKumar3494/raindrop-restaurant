@@ -4,27 +4,18 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart/Cart";
-import LoginPopup from "./components/LoginPopup/LoginPopup";
-import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
-import MyOrders from "./pages/MyOrders/MyOrders";
 
 //work: login not working - make it work or remove
 
 const App = () => {
-  const [showLogin, setShowLogin] = useState(false);
-
   return (
     <>
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
-
       <div className="app">
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/order" element={<PlaceOrder />} />
-          <Route path="/myorder" element={<MyOrders />} />
         </Routes>
       </div>
 

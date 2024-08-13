@@ -4,18 +4,17 @@ import "./Navbar.css";
 import { BsSearchHeart } from "react-icons/bs";
 import { BiSolidDish } from "react-icons/bi";
 
-import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = () => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
 
   return (
     <div className="navbar">
       <Link to="/">
-        <img className="logo" src={assets.logo} alt="" />
+        <img className="logo" src="#" alt="Logo Here" />
       </Link>
 
       <ul className="navbar-menu">
@@ -44,16 +43,14 @@ const Navbar = ({ setShowLogin }) => {
 
       <div className="navbar-right">
         {/* work: have to make the search bar work */}
-        <div>
+        <a href="#explore-menu">
           <BsSearchHeart className="search_icon" title="Search" />
-        </div>
+        </a>
 
         <Link to="/cart" className="navbar-search-icon">
           <BiSolidDish className="cart_icon" title="Cart" />
           <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
         </Link>
-
-        {/* <button onClick={() => setShowLogin(true)}>sign in</button> */}
       </div>
     </div>
   );
