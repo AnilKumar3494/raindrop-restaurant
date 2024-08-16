@@ -3,9 +3,13 @@
   align-items: center;
   border: 3px solid var(--accent-color);
   border-radius: 0.6rem;
-  padding: 8px;
+  padding: 0.5rem;
   background-color: #fff;
   transition: box-shadow 0.3s ease-in-out;
+
+  @media (max-width: 500px) {
+    padding: 0.3rem;
+  }
 }
 
 .searchbar:hover {
@@ -16,15 +20,15 @@
   flex: 1;
   border: none;
   outline: none;
-  padding: 8px;
 
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
 }
 
 .searchbar-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding-top: 0.3rem;
 }
 
 .searchbar-icon {

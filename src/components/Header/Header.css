@@ -10,3 +10,9 @@
 
   animation: fadeIn 3s;
 }
+
+@media (max-width: 800px) {
+  .header-contents {
+    gap: 1rem;
+  }
+}

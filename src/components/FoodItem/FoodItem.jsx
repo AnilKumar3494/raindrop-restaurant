@@ -41,9 +41,9 @@ const FoodItem = ({ image, name, price, desc, id }) => {
       </div>
 
       <div className="food-item-info">
-        <h3>{name}</h3>
+        <h3 className="food_name">{name}</h3>
         <p className="food-item-desc">{desc}</p>
-        <h3 className="food-item-price">${price}</h3>
+        <h3>${price}</h3>
       </div>
     </div>
   );
