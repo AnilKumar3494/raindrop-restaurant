@@ -1,9 +1,11 @@
 .food-display {
-  /* border: 5px solid salmon; */
-
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (max-width: 800px) {
+    gap: 1rem;
+  }
 }
 
 .food-display-list {

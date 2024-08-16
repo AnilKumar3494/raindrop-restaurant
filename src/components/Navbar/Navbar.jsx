@@ -21,21 +21,21 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={() => setMenu("home")}
-          className={`${menu === "home" ? "active" : ""} menu_item`}
+          className={`home ${menu === "home" ? "active" : ""} menu_item`}
         >
           home
         </Link>
         <a
           href="#explore-menu"
           onClick={() => setMenu("menu")}
-          className={`${menu === "menu" ? "active" : ""} menu_item`}
+          className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
         >
           menu
         </a>
         <a
           href="#footer"
           onClick={() => setMenu("contact")}
-          className={`${menu === "contact" ? "active" : ""} menu_item`}
+          className={`contact ${menu === "contact" ? "active" : ""} menu_item`}
         >
           contact us
         </a>
