@@ -6,7 +6,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   const { menu_list } = useContext(StoreContext);
 
   return (
-    <div className="explore-menu" id="explore-menu">
+    <section className="explore-menu" id="explore-menu">
       <h1>Explore Our Menu</h1>
 
       <p className="explore-menu-text">
@@ -41,7 +41,7 @@ const ExploreMenu = ({ category, setCategory }) => {
         })}
       </div>
       <hr />
-    </div>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header">
+    <section className="header">
       <div className="header-contents">
         <h1>Your Indian Food in Philadelphia</h1>
         <p>
@@ -25,7 +25,7 @@ const Header = () => {
           View Menu
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

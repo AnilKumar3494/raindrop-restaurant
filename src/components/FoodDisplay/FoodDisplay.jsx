@@ -18,7 +18,7 @@ const FoodDisplay = ({ category }) => {
   });
 
   return (
-    <div className="food-display" id="food-display">
+    <section className="food-display" id="food-display">
       <h1>{`${category} Just For You`}</h1>
 
       <Searchbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -35,7 +35,7 @@ const FoodDisplay = ({ category }) => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
