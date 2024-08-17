@@ -1,6 +1,7 @@
 .header {
-  margin: 30px auto;
   position: relative;
+  padding-bottom: 2rem;
+  padding-top: 0.3rem;
 }
 .header-contents {
   display: flex;

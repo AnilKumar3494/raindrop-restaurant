@@ -49,7 +49,7 @@
 
 @media (max-width: 800px) {
   .explore-menu-list-item img {
-    width: 7rem;
+    width: 7.5rem;
   }
   .explore-menu-list {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
