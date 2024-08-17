@@ -95,7 +95,7 @@ export let food_list = [
     {
 
         food_name: "Soya Chops",
-        food_image: "#",
+        food_image: "https://thumbs.dreamstime.com/b/soya-chaap-masala-indian-dish-36948902.jpg",
         food_price: 9.99,
         food_desc: "Marinated with homemade masala cooked in Tandoor.",
         food_category: "Appetizers"
