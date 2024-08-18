@@ -26,15 +26,6 @@ const Cart = () => {
       ) : (
         <div className="cart">
           <div className="cart-items">
-            <div className="cart-items-header">
-              <p>Items</p>
-              <p>Title</p>
-              <p>Price</p>
-              <p>Quantity</p>
-              <p>Total</p>
-              <p>Remove</p>
-            </div>
-            <hr />
             {food_list.map((item, index) => {
               const quantity = cartItems[item.food_id] || 0;
 
