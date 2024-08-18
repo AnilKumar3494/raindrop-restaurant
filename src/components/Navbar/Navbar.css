@@ -37,7 +37,7 @@ ul {
 
 .navbar-right {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .search_icon,

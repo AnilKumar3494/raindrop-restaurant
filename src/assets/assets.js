@@ -840,7 +840,7 @@ export let food_list = [
     {
 
         food_name: "Tawa Chicken",
-        food_image: "#",
+        food_image: "https://th.bing.com/th/id/R.e597d71390c8cc5a061592e3d4847040?rik=EOF8ppx9KI3hlA&riu=http%3a%2f%2fwww.tasty-indian-recipes.com%2fwp-content%2fuploads%2f2014%2f06%2fChicken-Tawa-Masala1.jpg&ehk=oGc6Bc9l3cshM1TJftwXlI8OUyKHCbkzYU63wHi7VLE%3d&risl=&pid=ImgRaw&r=0",
         food_price: 15.99,
         food_desc: "Bone-in chicken slowly cooked with tomato and onion sauce.",
         food_category: "Chefs Special"

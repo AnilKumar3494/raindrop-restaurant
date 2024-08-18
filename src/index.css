@@ -42,6 +42,8 @@
   --accent-color: #d6a456; /* Gold */
   --neutral-color: #ffffff; /* White */
   --text-color: #e8dbc8; /* Cream */
+  --danger-color: #e74c3c;
+  --danger-color-dark: #c0392b;
 
   /* Smaller Screens below 800 */
   --fs-100: 0.625rem;
