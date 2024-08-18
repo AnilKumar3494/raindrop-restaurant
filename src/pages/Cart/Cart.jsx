@@ -2,28 +2,31 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreContext";
 import { Link, useNavigate } from "react-router-dom";
-
 import { TiDeleteOutline } from "react-icons/ti";
 
 const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
     useContext(StoreContext);
+
   const navigate = useNavigate();
+  const { taxRate, totalAmount, totalWithTax } = getTotalCartAmount();
+
+  const cartIsEmpty = totalAmount === 0.0;
 
   return (
-    <>
-      {getTotalCartAmount() === 0.0 ? (
-        <div className="empty_cart_message">
-          <h2>Your Cart is looking a little light!</h2>
+    <div className="cart-container">
+      {cartIsEmpty ? (
+        <div className="empty-cart-message">
+          <h2>Your Cart is Looking a Little Light!</h2>
           <p>Why not explore our exquisite menu and find something you love?</p>
           <Link to="/" className="button">
-            Explore Menu
+            Explore Our Menu
           </Link>
         </div>
       ) : (
         <div className="cart">
           <div className="cart-items">
-            <div className="cart-items-title">
+            <div className="cart-items-header">
               <p>Items</p>
               <p>Title</p>
               <p>Price</p>
@@ -31,51 +34,57 @@ const Cart = () => {
               <p>Total</p>
               <p>Remove</p>
             </div>
-            <br />
             <hr />
             {food_list.map((item, index) => {
-              if (cartItems[item.food_id] > 0) {
+              const quantity = cartItems[item.food_id] || 0;
+
+              if (quantity > 0) {
                 return (
-                  <div key={index}>
-                    <div className="cart-items-title cart-items-item">
-                      <img src={item.food_image} alt={item.food_name} />
-                      <p>{item.food_name}</p>
-                      <p>${item.food_price}</p>
-                      <div>{cartItems[item.food_id]}</div>
-                      <p>${item.food_price * cartItems[item.food_id]}</p>
-                      <p
-                        className="cart-items-remove-icon"
-                        onClick={() => removeFromCart(item.food_id)}
-                      >
-                        <TiDeleteOutline />
-                      </p>
-                    </div>
-                    <hr />
+                  <div key={item.food_id} className="cart-item">
+                    <img
+                      src={item.food_image}
+                      alt={item.food_name}
+                      className="cart-item-image"
+                    />
+                    <p>{item.food_name}</p>
+                    <p>${item.food_price.toFixed(2)}</p>
+                    <p>{quantity}</p>
+                    <p>${(item.food_price * quantity).toFixed(2)}</p>
+                    <TiDeleteOutline
+                      className="remove-icon"
+                      onClick={() => removeFromCart(item.food_id)}
+                    />
                   </div>
                 );
               }
               return null;
             })}
           </div>
-          <div className="cart-bottom">
-            <div className="cart-total">
-              <h2>Cart Totals</h2>
-              <div>
-                <div className="cart-total-details">
-                  <p>Subtotal</p>
-                  <p>${getTotalCartAmount()}</p>
-                </div>
-                <hr />
-                <div className="cart-total-details">
-                  <b>Total</b>
-                  <b>${getTotalCartAmount().toFixed(2)}</b>
-                </div>
+
+          <div className="cart-total">
+            <h2>Your Total</h2>
+
+            <div className="cart-total-details">
+              <div className="subtotal">
+                <p>Subtotal</p>
+                <p>${totalAmount.toFixed(2)}</p>
+              </div>
+
+              <div className="taxamonut">
+                <p>{`Tax (${(taxRate * 100).toFixed(1)} %)`}</p>
+                <p>${`${(totalAmount * taxRate).toFixed(2)}`}</p>
+              </div>
+
+              <hr />
+              <div className="final-total">
+                <p>Total</p>
+                <p>${totalWithTax.toFixed(2)}</p>
               </div>
             </div>
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

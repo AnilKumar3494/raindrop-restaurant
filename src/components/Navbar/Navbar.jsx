@@ -9,7 +9,17 @@ import { StoreContext } from "../../Context/StoreContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+
   const { getTotalCartAmount } = useContext(StoreContext);
+  const { taxRate, totalAmount, totalWithTax } = getTotalCartAmount();
+
+  // Function to handle scrolling
+  const scrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="navbar">
@@ -29,10 +39,9 @@ const Navbar = () => {
         </Link>
         <Link
           to="/"
-          onClick={(e) => {
-            e.preventDefault(); // Prevent the default behavior
-            setMenu("home"); // Set the menu state to "home"
-            window.location.href = "/#explore-menu"; // Navigate to the anchor
+          onClick={() => {
+            setMenu("menu");
+            scrollToElement("explore-menu");
           }}
           className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
         >
@@ -50,13 +59,26 @@ const Navbar = () => {
 
       <div className="navbar-right">
         {/* work: have to make the search bar work */}
-        <a href="#explore-menu">
+        <Link
+          to="/"
+          onClick={() => {
+            setMenu("menu");
+            scrollToElement("explore-menu");
+          }}
+          className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
+        >
           <BsSearchHeart className="search_icon" title="Search" />
-        </a>
+        </Link>
 
         <Link to="/cart" className="navbar-search-icon">
-          <BiSolidDish className="cart_icon" title="Cart" />
-          <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
+          <BiSolidDish
+            onClick={() => {
+              setMenu("cart_icon");
+            }}
+            className={`cart_icon ${menu === "menu" ? "active" : ""} menu_item`}
+            title="Cart"
+          />
+          <div className={totalAmount > 0 ? "dot" : ""}></div>
         </Link>
       </div>
     </div>
