@@ -19,7 +19,11 @@ const FoodDisplay = ({ category }) => {
 
   return (
     <section className="food-display" id="food-display">
-      <h1>{`${category} Just For You`}</h1>
+      {category === "All" ? (
+        <h1>Our Love Filled Menu Just For You</h1>
+      ) : (
+        <h1>Choose from our Exquisite {category}</h1>
+      )}
 
       <Searchbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 

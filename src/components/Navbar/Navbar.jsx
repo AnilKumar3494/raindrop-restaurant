@@ -25,20 +25,25 @@ const Navbar = () => {
         >
           home
         </Link>
-        <a
-          href="#explore-menu"
-          onClick={() => setMenu("menu")}
+        <Link
+          to="/"
+          onClick={(e) => {
+            e.preventDefault(); // Prevent the default behavior
+            setMenu("home"); // Set the menu state to "home"
+            window.location.href = "/#explore-menu"; // Navigate to the anchor
+          }}
           className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
         >
           menu
-        </a>
-        <a
-          href="#footer"
+        </Link>
+
+        <Link
+          to="/contactus"
           onClick={() => setMenu("contact")}
           className={`contact ${menu === "contact" ? "active" : ""} menu_item`}
         >
           contact us
-        </a>
+        </Link>
       </ul>
 
       <div className="navbar-right">
