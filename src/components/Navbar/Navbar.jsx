@@ -41,7 +41,7 @@ const Navbar = () => {
           to="/"
           onClick={() => {
             setMenu("menu");
-            scrollToElement("explore-menu");
+            scrollToElement("food-display");
           }}
           className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
         >
