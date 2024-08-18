@@ -14,13 +14,17 @@
   /* background-color: aliceblue; */
 }
 
-.navbar-menu {
+ul {
+  padding-inline-start: 0px !important;
+}
+
+.navbar_menu {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
 
-.navbar-menu .active {
+.navbar_menu .active {
   padding-bottom: 2px;
   border-bottom: 2px solid var(--accent-color);
 }
@@ -67,8 +71,12 @@
 /* responsive */
 
 @media (max-width: 600px) {
+  .home {
+    display: none;
+  }
+
   .navbar-right,
-  .navbar-menu {
-    gap: 1.2rem;
+  .navbar_menu {
+    gap: 1rem;
   }
 }
