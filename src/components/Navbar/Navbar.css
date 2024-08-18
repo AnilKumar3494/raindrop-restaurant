@@ -67,12 +67,8 @@
 /* responsive */
 
 @media (max-width: 600px) {
-  .home,
-  .menu,
-  .contact {
-    display: none;
-  }
-  .navbar-right {
+  .navbar-right,
+  .navbar-menu {
     gap: 1.2rem;
   }
 }

@@ -13,9 +13,11 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link to="/">
-        <img className="logo" src="#" alt="RainDrops Fine Dining" />
-      </Link>
+      <div>
+        <Link to="/">
+          <img className="logo" src="#" alt="Raindrops" />
+        </Link>
+      </div>
 
       <ul className="navbar-menu">
         <Link
