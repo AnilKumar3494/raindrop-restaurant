@@ -15,9 +15,9 @@ const Header = () => {
           appetite and elevate your dining experience.
         </p>
         <p>
-          At Raindrop, we take pride in bringing you the rich heritage of Indian
-          cuisine, offering both dine-in and
-          <a href="https://www.google.com/"> online delivery </a> options to
+          At Raindrop's Indian Restaurant, we take pride in bringing you the
+          rich heritage of Indian cuisine, offering dine-in, take-away,
+          <a href="#order_online"> online delivery </a> and catering options to
           suit your needs. Explore our menu and find your new favorite dish
           today!
         </p>

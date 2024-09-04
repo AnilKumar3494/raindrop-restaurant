@@ -33,6 +33,7 @@ ul {
   color: var(--neutral-color);
   font-size: var(--fs-500);
   transition: 0.3s;
+  text-transform: capitalize;
 }
 
 .navbar-right {

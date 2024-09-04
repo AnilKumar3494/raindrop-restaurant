@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import Logo from "../Logo/Logo";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="logo">
           {/* <Logo /> */}
           <Link to="/">
-            <img className="logo" src="#" alt="RainDrops Fine Dining" />
+            <Logo />
           </Link>
         </div>
 
@@ -24,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="online_delivery">
+        <div className="online_delivery" id="order_online">
           <h2>Order Online:</h2>
           <div className="flex_row">
             <a href="">
