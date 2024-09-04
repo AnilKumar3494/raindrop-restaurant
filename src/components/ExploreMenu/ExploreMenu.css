@@ -26,6 +26,11 @@
 
   transition: 0.3s ease-in;
 }
+.menu_item_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .explore-menu-list-item:hover h3 {
   text-decoration: underline;

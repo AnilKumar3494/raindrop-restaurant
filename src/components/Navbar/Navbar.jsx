@@ -6,6 +6,7 @@ import { BiSolidDish } from "react-icons/bi";
 
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../Context/StoreContext";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -25,7 +26,7 @@ const Navbar = () => {
     <div className="navbar">
       <div>
         <Link to="/">
-          <img className="logo" src="#" alt="Raindrops" />
+          <Logo />
         </Link>
       </div>
 
@@ -35,7 +36,7 @@ const Navbar = () => {
           onClick={() => setMenu("home")}
           className={`home ${menu === "home" ? "active" : ""} menu_item`}
         >
-          home
+          Home
         </Link>
         <Link
           to="/"
@@ -45,7 +46,7 @@ const Navbar = () => {
           }}
           className={`menu ${menu === "menu" ? "active" : ""} menu_item`}
         >
-          menu
+          Menu
         </Link>
 
         <Link
@@ -53,7 +54,7 @@ const Navbar = () => {
           onClick={() => setMenu("contact")}
           className={`contact ${menu === "contact" ? "active" : ""} menu_item`}
         >
-          contact
+          Contact
         </Link>
       </ul>
 
@@ -69,20 +70,32 @@ const Navbar = () => {
         >
           <BsSearchHeart className="search_icon" title="Search" />
         </Link>
-
-        <Link to="/cart" className="navbar-search-icon">
-          <BiSolidDish
-            onClick={() => {
-              setMenu("cart_icon");
-            }}
-            className={`cart_icon ${menu === "menu" ? "active" : ""} menu_item`}
-            title="Cart"
-          />
-          <div className={totalAmount > 0 ? "dot" : ""}></div>
-        </Link>
+        <>
+          <CartIcon />
+        </>
       </div>
     </div>
   );
 };
 
 export default Navbar;
+
+export const CartIcon = () => {
+  const [menu, setMenu] = useState("home");
+
+  const { getTotalCartAmount } = useContext(StoreContext);
+  const { taxRate, totalAmount, totalWithTax } = getTotalCartAmount();
+
+  return (
+    <Link to="/cart" className="navbar-search-icon">
+      <BiSolidDish
+        onClick={() => {
+          setMenu("cart_icon");
+        }}
+        className={`cart_icon ${menu === "menu" ? "active" : ""} menu_item`}
+        title="Cart"
+      />
+      <div className={totalAmount > 0 ? "dot" : ""}></div>
+    </Link>
+  );
+};

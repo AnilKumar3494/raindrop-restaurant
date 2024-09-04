@@ -20,11 +20,7 @@ const StoreContextProvider = (props) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Save cart items to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
-
+  // Function to add an item to the cart
   const addToCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
@@ -32,7 +28,17 @@ const StoreContextProvider = (props) => {
     }));
   };
 
+  // Function to remove an item from the cart entirely
   const removeFromCart = (itemId) => {
+    setCartItems((prev) => {
+      const newCart = { ...prev };
+      delete newCart[itemId];
+      return newCart;
+    });
+  };
+
+  // Function to decrease the quantity of an item in the cart
+  const decreaseQuantity = (itemId) => {
     setCartItems((prev) => {
       const newCart = { ...prev };
       if (newCart[itemId] > 1) {
@@ -44,9 +50,10 @@ const StoreContextProvider = (props) => {
     });
   };
 
+  // Function to calculate the total amount in the cart
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    const taxRate = 0.08; //this will be 7%
+    const taxRate = 0.08; // this will be 7%
 
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
@@ -72,6 +79,7 @@ const StoreContextProvider = (props) => {
     menu_list,
     cartItems,
     addToCart,
+    decreaseQuantity, // Added decreaseQuantity function to context
     removeFromCart,
     getTotalCartAmount,
   };

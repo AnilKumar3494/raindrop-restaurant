@@ -1,14 +1,22 @@
 import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { PiPlusSquareBold } from "react-icons/pi";
+import { PiMinusSquareBold } from "react-icons/pi";
 import { TiDeleteOutline } from "react-icons/ti";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
-    useContext(StoreContext);
+  const {
+    cartItems,
+    food_list,
+    addToCart,
+    decreaseQuantity,
+    removeFromCart,
+    getTotalCartAmount,
+  } = useContext(StoreContext);
 
-  const navigate = useNavigate();
   const { taxRate, totalAmount, totalWithTax } = getTotalCartAmount();
 
   const cartIsEmpty = totalAmount === 0.0;
@@ -26,7 +34,7 @@ const Cart = () => {
       ) : (
         <div className="cart">
           <div className="cart-items">
-            {food_list.map((item, index) => {
+            {food_list.map((item) => {
               const quantity = cartItems[item.food_id] || 0;
 
               if (quantity > 0) {
@@ -39,7 +47,23 @@ const Cart = () => {
                     />
                     <p>{item.food_name}</p>
                     <p>${item.food_price.toFixed(2)}</p>
-                    <p>{quantity}</p>
+                    <div className="quantity-controls">
+                      <div
+                        className="decrease_button"
+                        onClick={() => decreaseQuantity(item.food_id)}
+                        aria-label="Decrease quantity"
+                      >
+                        <PiMinusSquareBold />
+                      </div>
+                      <p>{quantity}</p>
+                      <div
+                        className="increase_button"
+                        onClick={() => addToCart(item.food_id)}
+                        aria-label="Increase quantity"
+                      >
+                        <PiPlusSquareBold />
+                      </div>
+                    </div>
                     <p>${(item.food_price * quantity).toFixed(2)}</p>
                     <TiDeleteOutline
                       className="remove-icon"
@@ -61,9 +85,9 @@ const Cart = () => {
                 <p>${totalAmount.toFixed(2)}</p>
               </div>
 
-              <div className="taxamonut">
-                <p>{`Tax (${(taxRate * 100).toFixed(1)} %)`}</p>
-                <p>${`${(totalAmount * taxRate).toFixed(2)}`}</p>
+              <div className="taxamount">
+                <p>{`Tax (${(taxRate * 100).toFixed(1)}%)`}</p>
+                <p>${(totalAmount * taxRate).toFixed(2)}</p>
               </div>
 
               <hr />

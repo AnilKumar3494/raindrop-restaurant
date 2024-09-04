@@ -14,26 +14,6 @@
   --clr-neutral-800: #1a1a1a;
   --clr-neutral-900: #000000;
 
-  --clr-primary-100: #e6f5ff;
-  --clr-primary-200: #b3e5ff;
-  --clr-primary-300: #80d4ff;
-  --clr-primary-400: #4dc4ff;
-  --clr-primary-500: #1ab3ff;
-  --clr-primary-600: #0099e6;
-  --clr-primary-700: #007acc;
-  --clr-primary-800: #005c99;
-  --clr-primary-900: #003d66;
-
-  --clr-secondary-100: #f2e6ff;
-  --clr-secondary-200: #d9b3ff;
-  --clr-secondary-300: #bf80ff;
-  --clr-secondary-400: #a64dff;
-  --clr-secondary-500: #8c1aff;
-  --clr-secondary-600: #7314e6;
-  --clr-secondary-700: #590fcc;
-  --clr-secondary-800: #400a99;
-  --clr-secondary-900: #260666;
-
   --clr-accent-main: orangered;
   --clr-accent-secondary: purple;
 
@@ -63,6 +43,7 @@
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.325rem;
+    --fs-550: 1.5rem;
     --fs-600: 2rem;
     --fs-700: 2.75rem;
     --fs-800: 3.25rem;
@@ -77,6 +58,7 @@
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.325rem;
+    --fs-550: 1.5rem;
     --fs-600: 2rem;
     --fs-700: 2.75rem;
     --fs-800: 3.5rem;

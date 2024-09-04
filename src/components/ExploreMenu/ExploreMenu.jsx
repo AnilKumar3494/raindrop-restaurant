@@ -28,14 +28,14 @@ const ExploreMenu = ({ category, setCategory }) => {
               title={item.menu_name}
               className="explore-menu-list-item"
             >
-              <a href="#food-item-card">
+              <a href="#food-item-card" className="menu_item_card">
                 <img
                   src={item.menu_image}
                   className={category === item.menu_name ? "active" : ""}
                   alt={item.menu_name}
                 />
+                <h3>{item.menu_name}</h3>
               </a>
-              <h3>{item.menu_name}</h3>
             </div>
           );
         })}

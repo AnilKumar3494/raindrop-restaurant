@@ -9,12 +9,28 @@ const FoodDisplay = ({ category }) => {
 
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Filter food_list based on category and search query
+  // // Filter food_list based on category and search query
+  // const filteredFoodList = food_list.filter((item) => {
+  //   return (
+  //     (category === "All" || category === item.food_category) &&
+  //     item.food_name.toLowerCase().includes(searchQuery.toLowerCase())
+  //   );
+  // });
+
+  // Filter food_list based on search query and/or category
   const filteredFoodList = food_list.filter((item) => {
-    return (
-      (category === "All" || category === item.food_category) &&
-      item.food_name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const matchesCategory =
+      category === "All" || category === item.food_category;
+    const matchesSearchQuery = item.food_name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+
+    // If there's a search query, ignore the category filter
+    if (searchQuery) {
+      return matchesSearchQuery;
+    }
+
+    return matchesCategory && matchesSearchQuery;
   });
 
   return (
