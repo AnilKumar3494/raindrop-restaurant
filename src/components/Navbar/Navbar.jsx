@@ -24,11 +24,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div>
-        <Link to="/">
-          <Logo />
-        </Link>
-      </div>
+      <Link to="/">
+        <Logo />
+      </Link>
 
       <ul className="navbar_menu">
         <Link

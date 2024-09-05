@@ -3,9 +3,8 @@ import add_icon_green from './add_icon_green.png'
 import remove_icon_red from './remove_icon_red.png'
 import uber_eats_img from './uber_eats_img.png'
 import grub_hub_img from './grub_hub_img.jpg'
-import orange_logo from './orange_logo.jpeg'
-import lightgreen_logo from './lightgreen_logo.jpeg'
-import darkgreen_logo from './darkgreen_logo.jpeg'
+import footerblack_logo from './footerblack_logo.jpeg'
+import bggreen_logo from './bggreen_logo.jpeg'
 
 export const assets = {
     add_icon_green,
@@ -13,9 +12,8 @@ export const assets = {
     add_icon_white,
     uber_eats_img,
     grub_hub_img,
-    orange_logo,
-    lightgreen_logo,
-    darkgreen_logo
+    bggreen_logo,
+    footerblack_logo
 }
 
 

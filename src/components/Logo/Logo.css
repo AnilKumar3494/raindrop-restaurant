@@ -1,4 +1,13 @@
 .logo {
-  max-width: 150px;
+  max-width: 220px;
+
+  /* border: 2px solid gold; */
+
+  @media (max-width: 800px) {
+    max-width: 120px;
+  }
+}
+
+.footer {
   border-radius: 0.4rem;
 }
