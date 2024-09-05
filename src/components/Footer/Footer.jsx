@@ -11,16 +11,16 @@ const Footer = () => {
         <div className="logo">
           {/* <Logo /> */}
           <Link to="/">
-            <Logo />
+            <Logo isFooter={true} />
           </Link>
         </div>
 
         <div className="contact-details">
           <h2>Contact Us:</h2>
           <div className="flex_col">
-            <a href="tel:+">- Phone: +1 123-456-7890</a>
+            <a href="tel:+">- Phone: +1 215-449-0040</a>
             <a href="">
-              - Address: xxxx Fairmount St, Philadelphia, PA - 19104
+              - Address: 2749 N 47th Street, Philadelphia, PA - 19131
             </a>
           </div>
         </div>

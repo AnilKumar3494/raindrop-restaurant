@@ -3,14 +3,11 @@ import { assets } from "../../assets/assets";
 
 import "./Logo.css";
 
-const Logo = () => {
+const Logo = ({ isFooter }) => {
+  const src = isFooter ? assets.footerblack_logo : assets.bggreen_logo;
   return (
     <>
-      <img
-        className="logo"
-        src={assets.lightgreen_logo}
-        alt="Raindrop's Indian Restaurant"
-      />
+      <img className={`logo`} src={src} alt={"Raindrop's Indian Restaurant"} />
     </>
   );
 };
