@@ -9,7 +9,6 @@ const Footer = () => {
     <footer className="footer bg_img_check">
       <div className="footer_content">
         <div className="logo">
-          {/* <Logo /> */}
           <Link to="/">
             <Logo isFooter={true} />
           </Link>
@@ -18,8 +17,8 @@ const Footer = () => {
         <div className="contact-details">
           <h2>Contact Us:</h2>
           <div className="flex_col">
-            <a href="tel:+">- Phone: +1 215-449-0040</a>
-            <a href="">
+            <a href="tel:+12154490040">- Phone: +1 215-449-0040</a>
+            <a href="https://maps.app.goo.gl/sQcb1ocjmsuMcBR57" target="_blank">
               - Address: 2749 N 47th Street, Philadelphia, PA - 19131
             </a>
           </div>
