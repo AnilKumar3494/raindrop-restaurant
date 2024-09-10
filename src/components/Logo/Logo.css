@@ -1,13 +1,21 @@
-.logo {
-  max-width: 220px;
-
-  /* border: 2px solid gold; */
+.nav_logo {
+  max-width: 240px;
+  height: 80px;
 
   @media (max-width: 800px) {
-    max-width: 120px;
+    max-width: 110px;
+    height: auto;
   }
 }
 
-.footer {
-  border-radius: 0.4rem;
+.footer_logo {
+  border-radius: 2rem;
+  max-width: 280px;
+
+  @media (max-width: 800px) {
+    max-width: 170px;
+
+    border-radius: 0.5rem;
+    height: auto;
+  }
 }
