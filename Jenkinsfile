@@ -1,49 +1,29 @@
 pipeline {
-  agent any
+    agent: any
 
-  environment {
-    DOCKER_USER = 'anil3494'
-    DOCKER_IMAGE = 'raindrop-restaurant'
-    DOCKER_PASS = credentials('docker-hub-pass')  
-  }
+    stages{
+        stage('Building Raindrops Application'){
+            agent{
+                docker {image 'node:18-alpine'}
+            }
 
-  stages {
+            steps{
+                echo 'Build Starting ... RUNNING npm install'
 
-    stage('Build React App') {
-      agent {
-        docker { image 'node:18-alpine' }  
-      }
+                sh 'npm install --cache .npm-cache'
 
-      steps {
-        sh 'npm install'
-        sh 'npm run build'
-      }
+                echo 'NPM install complete. Running npm run build...'
+
+                sh 'npm run build'
+
+                echo 'React App built successfully in Jenkins Workspace'
+            }
+        }
     }
 
-    stage('Build Docker Image') {
-      steps {
-        sh '''
-          docker build -t ${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER} .
-        '''
-      }
+    post{
+        always{
+            echo 'Pipleline CP 1 done'
+        }
     }
-
-    stage('Push Docker Image') {
-      steps {
-        sh '''
-          echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-          docker push ${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER}
-        '''
-      }
-    }
-
-    stage('Deploy to Kubernetes') {
-      steps {
-        sh '''
-          ssh -o StrictHostKeyChecking=no ubuntu@172.31.6.198 \
-          "kubectl set image deployment/raindrop-restaurant-deployment raindrop-container=${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER} --record"
-        '''
-      }
-    }
-  }
 }
