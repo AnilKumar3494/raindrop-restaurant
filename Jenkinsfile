@@ -8,11 +8,6 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/AnilKumar3494/raindrop-restaurant.git'
-      }
-    }
 
     stage('Build React App') {
       steps {
