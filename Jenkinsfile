@@ -4,12 +4,16 @@ pipeline {
   environment {
     DOCKER_USER = 'anil3494'
     DOCKER_IMAGE = 'raindrop-restaurant'
-    DOCKER_PASS = credentials('docker-hub-pass')  // Jenkins credential ID
+    DOCKER_PASS = credentials('docker-hub-pass')  
   }
 
   stages {
 
     stage('Build React App') {
+      agent {
+        docker { image 'node:18-alpine' }  
+      }
+
       steps {
         sh 'npm install'
         sh 'npm run build'
