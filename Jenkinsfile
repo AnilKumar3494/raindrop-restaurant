@@ -7,7 +7,7 @@ pipeline {
         DOCKER_IMAGE = 'raindrop-restaurant'
 
         // Kub Variables
-        KUB_MASTER_HOST = 'ubuntu@54.95.39.130'
+        KUB_MASTER_HOST = 'root@54.95.39.130'
 
         KUB_MASTER_CREDS = 'k8s-master-ssh'
     }
