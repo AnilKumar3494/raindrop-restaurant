@@ -15,8 +15,10 @@ pipeline {
                 echo 'NPM install complete. Running npm run build...'
 
                 sh 'npm run build'
-
-                echo 'React App built successfully in Jenkins Workspace'
+                
+                sh 'pwd'
+                
+                echo 'App built successfully in Jenkins Workspace'
             }
         }
     }
