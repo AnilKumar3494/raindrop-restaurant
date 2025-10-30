@@ -1,31 +1,47 @@
 pipeline {
     agent any
 
-    stages{
-        stage('Building Raindrops Application'){
-            agent{
-                docker {image 'node:18-alpine'}
-            }
+    environment{
+        DOCKER_USER = 'anil3494'
+        DOCKER_IMAGE = 'raindrop-restaurant'
+    }
+    
+    // ## Git to Jenkins and build the Raindrop application using NodeJS Docker image
+    // stages{
+    //     stage('Building Raindrops Application'){
+    //         agent{
+    //             docker {image 'node:18-alpine'}
+    //         }
 
-            steps{
-                echo 'Build Starting ... RUNNING npm install'
+    //         steps{
+    //             echo 'Build Starting ... RUNNING npm install'
 
-                sh 'npm install --cache .npm-cache'
+    //             sh 'npm install --cache .npm-cache'
 
-                echo 'NPM install complete. Running npm run build...'
+    //             echo 'NPM install complete. Running npm run build...'
 
-                sh 'npm run build'
+    //             sh 'npm run build'
                 
-                sh 'pwd'
-                
-                echo 'App built successfully in Jenkins Workspace'
-            }
+    //             sh 'pwd'
+
+    //             echo 'App built successfully in Jenkins Workspace'
+    //         }
+    //     }
+    // }
+
+    stage('Build Docker Image'){
+        steps{
+            echo 'Building Docker Image: ${DOCKER_USER}/${DOCKER_IMAGE} with tag as ${BUILD_NUMBER}'
+
+            sh 'docker build -t ${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER} .'
+
+            echo "Docker image built successfully!"
         }
     }
 
     post{
         always{
-            echo 'Pipleline CP 1 done'
+            echo 'Pipeline CP 2 DONE -- Cloning repo, building and making its Docker Image done'
         }
     }
 }
