@@ -7,7 +7,7 @@ pipeline {
         DOCKER_IMAGE = 'raindrop-restaurant'
 
         // Kub Variables
-        KUB_MASTER_HOST = 'root@54.95.39.130'
+        KUB_MASTER_HOST = 'ubuntu@54.95.39.130'
 
         KUB_MASTER_CREDS = 'k8s-master-ssh'
     }
@@ -52,7 +52,7 @@ pipeline {
                 sshagent (credentials: [KUB_MASTER_CREDS]) {
                     sh '''
                     ssh -o StrictHostKeyChecking=no ${KUB_MASTER_HOST} \
-                        "kubectl set image deployment/raindrop-deployment raindrop-container=${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER}"
+                        "sudo kubectl set image deployment/raindrop-deployment raindrop-container=${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER}"
                     '''
                 }
                 echo "Deployment to Kubernetes complete!"
