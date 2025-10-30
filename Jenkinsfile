@@ -18,11 +18,29 @@ pipeline {
                 echo "Docker image built successfully!"
             }
         }
+
+        stage('Push Docker Image to Docker Hub'){
+            steps {
+                echo "Pushing image to Docker Hub..."
+
+                withCredentials([usernamePassword(credentialsId: 'ak-dockerhub-creds', usernameVariable: 'DOCKER_USER_VAR', passwordVariable: 'DOCKER_PASS_VAR')]) {
+                    sh  '''
+                    # Log in to Docker Hub using the credentials
+                    echo $DOCKER_PASS_VAR | docker login -u $DOCKER_USER_VAR --password-stdin
+
+                    docker push ${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER}
+
+                    '''
+            }
+             
+            echo "Image pushed successfully!"
+
+        }
     }
 
     post{
         always{
-            echo 'Pipeline CP 2 DONE -- Cloning repo, building and making its Docker Image done'
+            echo 'Pipeline CP  3 DONE -- Image built and pushed to Docker Hub'
         }
     }
 }
