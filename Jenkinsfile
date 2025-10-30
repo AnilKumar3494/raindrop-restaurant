@@ -2,8 +2,14 @@ pipeline {
     agent any
 
     environment{
+        // Docker variables
         DOCKER_USER = 'anil3494'
         DOCKER_IMAGE = 'raindrop-restaurant'
+
+        // Kub Variables
+        KUB_MASTER_HOST = 'ubuntu@54.95.39.130'
+
+        KUB_MASTER_CREDS = 'k8s-master-ssh'
     }
 
  
@@ -38,11 +44,26 @@ pipeline {
                 echo "Image pushed successfully!"
             }
         }
+
+        stage('Deploy to Kub'){
+            steps{
+                echo 'Deploying to Kubernetes Cluster...'
+
+                sshagent (credentials: [KUB_MASTER_CREDS]) {
+                    sh '''
+                    ssh -o StrictHostKeyChecking=no ${KUB_MASTER_HOST} \
+                        "kubectl set image deployment/raindrop-deployment raindrop-container=${DOCKER_USER}/${DOCKER_IMAGE}:${BUILD_NUMBER}"
+                    '''
+                }
+                echo "Deployment to Kubernetes complete!"
+            }
+        }
     }
 
     post{
         always{
-            echo 'Pipeline CP 3 DONE -- Image built and pushed to Docker Hub'
+            // echo 'Pipeline CP 3 DONE -- Image built and pushed to Docker Hub'
+            echo 'Pipeline CP 4 DONE -- Full CI/CD complete!'
         }
     }
 }
